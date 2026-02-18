@@ -1,0 +1,16 @@
+# Rust build artifacts
+/target/
+
+# Cargo lock (keep for binaries, remove for libraries)
+# Cargo.lock
+
+# Environment secrets — NEVER commit real keys
+.env
+
+# Local cache database
+cache.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp

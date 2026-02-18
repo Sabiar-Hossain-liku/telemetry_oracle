@@ -1,0 +1,26 @@
+[package]
+name = "telemetry_oracle"
+version = "0.1.0"
+edition = "2021"
+description = "An off-chain oracle CLI for real-world asset valuation on Solana"
+authors = ["sabiar"]
+
+[dependencies]
+# Async runtime — the engine that powers non-blocking I/O
+tokio = { version = "1", features = ["full"] }
+
+# HTTP client — reaches out to external APIs
+reqwest = { version = "0.12", features = ["json"] }
+
+# Serialization / Deserialization — the schema contract
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Environment variable loader — reads .env secrets
+dotenv = "0.15"
+
+# Error handling — ergonomic error propagation
+anyhow = "1"
+
+# Command-line argument parsing — the dashboard interface
+clap = { version = "4", features = ["derive"] }
