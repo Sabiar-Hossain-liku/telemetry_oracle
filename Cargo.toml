@@ -6,21 +6,21 @@ description = "An off-chain oracle CLI for real-world asset valuation on Solana"
 authors = ["sabiar"]
 
 [dependencies]
-# Async runtime — the engine that powers non-blocking I/O
+# Async runtime
 tokio = { version = "1", features = ["full"] }
 
-# HTTP client — reaches out to external APIs
+# HTTP client
 reqwest = { version = "0.12", features = ["json"] }
 
-# Serialization / Deserialization — the schema contract
+# Serialization / Deserialization 
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 
-# Environment variable loader — reads .env secrets
+# Environment variable
 dotenv = "0.15"
 
-# Error handling — ergonomic error propagation
+# Error handling
 anyhow = "1"
 
-# Command-line argument parsing — the dashboard interface
+# Command-line argument parsing
 clap = { version = "4", features = ["derive"] }

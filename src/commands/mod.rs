@@ -1,8 +1,4 @@
-// ============================================================
-// commands/mod.rs — The Dashboard: Command Dispatcher
-// Re-exports all command handlers.
-// ============================================================
-
+// mod file contain all the modules of the project
 pub mod add;
 pub mod list;
 pub mod refresh;

@@ -1,6 +1,5 @@
 // ============================================================
-// client/mod.rs — The Radio Tower
-// Re-exports the api module.
+// client/mod.rs — The Radio Tower Module Declaration
 // ============================================================
 
 pub mod api;

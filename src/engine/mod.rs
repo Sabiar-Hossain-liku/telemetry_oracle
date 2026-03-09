@@ -1,6 +1,5 @@
 // ============================================================
-// engine/mod.rs — The Powertrain
-// Re-exports all engine sub-modules.
+// engine/mod.rs — The Powertrain Module Declaration
 // ============================================================
 
 pub mod calculator;

@@ -3,11 +3,7 @@
 // Custom error types for network failures and parse errors.
 // ============================================================
 
-// TODO: Define an OracleError enum using `thiserror` or `anyhow`
-// Variants to consider:
-//   - NetworkError(String)   — reqwest / HTTP failures
-//   - ParseError(String)     — serde_json deserialization failures
-//   - StorageError(String)   — file I/O or cache failures
-//   - NotFound(String)       — asset or rate not found
-
+// A type alias so every function in the project returns
+// OracleResult<T> instead of Result<T, SomeSpecificError>.
+// anyhow::Result lets you use `?` on ANY error type automatically.
 pub type OracleResult<T> = anyhow::Result<T>;

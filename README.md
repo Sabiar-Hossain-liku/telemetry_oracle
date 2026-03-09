@@ -37,15 +37,26 @@ cargo run -- list
 ## Project Structure
 
 ```
-src/
-├── main.rs           # Async entry point + CLI dispatcher
-├── lib.rs            # Module registry
-├── errors.rs         # Custom error types
-├── client/api.rs     # reqwest HTTP client
-├── engine/model.rs   # Serde data structures
-├── engine/storage.rs # Local cache (cache.db)
-├── engine/calculator.rs # Currency conversion logic
-└── commands/         # add / list / refresh handlers
+├── Cargo.toml            # Features: tokio (full), reqwest (json), serde, dotenv
+├── .env                  # API Keys & Secrets (The Fuel Grade)
+├── src/
+│   ├── main.rs           # The Ignition: Async entry point
+│   ├── lib.rs            # The Chassis: Module registry
+│   ├── errors.rs         # Check Engine Light: Network & Parse errors
+│   ├── client/           # The Radio Tower: External API Logic
+│   │   ├── mod.rs
+│   │   └── api.rs        # reqwest implementation
+│   ├── engine/           # THE POWERTRAIN: Core Business Logic
+│   │   ├── mod.rs
+│   │   ├── model.rs      # Asset & Rate Data Structures
+│   │   ├── storage.rs    # Persistence (Local Cache)
+│   │   └── calculator.rs # Cross-currency valuation logic
+│   └── commands/         # THE DASHBOARD: User Interface
+│       ├── mod.rs        # Command Dispatcher
+│       ├── add.rs        # Add asset with currency tag
+│       ├── list.rs       # List assets with real-time conversion
+│       └── refresh.rs    # Manually pull new Oracle data
+└── cache.db              # Local storage for the last known rates
 ```
 
 ## Why this matters for Solana RWA
