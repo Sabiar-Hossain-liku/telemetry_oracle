@@ -1,7 +1,3 @@
-// ============================================================
-// commands/list.rs — List Assets Command
-// Displays all assets with real-time currency conversion.
-// ============================================================
 
 use crate::engine::{calculator, storage};
 use crate::errors::OracleResult;

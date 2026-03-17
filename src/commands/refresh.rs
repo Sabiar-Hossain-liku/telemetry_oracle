@@ -1,8 +1,3 @@
-// ============================================================
-// commands/refresh.rs — Refresh Oracle Data Command
-// Pulls fresh exchange rate data from the API and caches it.
-// ============================================================
-
 use crate::client::api;
 use crate::engine::storage;
 use crate::errors::OracleResult;

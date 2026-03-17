@@ -1,7 +1,3 @@
-// ============================================================
-// commands/add.rs — Add Asset Command
-// Accepts user input and persists a new asset with a currency tag.
-// ============================================================
 
 use crate::engine::{model::Asset, storage};
 use crate::errors::OracleResult;
@@ -28,7 +24,7 @@ pub fn run(name: String, value_usd: f64, currency: String) -> OracleResult<()> {
 
     // 5. Confirm to the user
     println!(
-        "✅  Asset added → \"{}\" | ${:.2} USD | reported in {}",
+        " Asset added → \"{}\" | ${:.2} USD | reported in {}",
         name, value_usd, currency
     );
 

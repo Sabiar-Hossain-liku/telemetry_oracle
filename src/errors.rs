@@ -1,8 +1,3 @@
-// ============================================================
-// errors.rs — The Check Engine Light
-// Custom error types for network failures and parse errors.
-// ============================================================
-
 // A type alias so every function in the project returns
 // OracleResult<T> instead of Result<T, SomeSpecificError>.
 // anyhow::Result lets you use `?` on ANY error type automatically.

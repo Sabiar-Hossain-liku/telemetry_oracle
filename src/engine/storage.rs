@@ -1,8 +1,3 @@
-// ============================================================
-// engine/storage.rs — Persistence (Local Cache)
-// Reads and writes assets and exchange rates to disk as JSON.
-// ============================================================
-
 use crate::engine::model::{Asset, RateResponse};
 use crate::errors::OracleResult;
 use anyhow::Context;

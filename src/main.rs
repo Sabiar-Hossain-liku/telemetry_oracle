@@ -1,13 +1,7 @@
-// ============================================================
-// main.rs — The Ignition
-// Async entry point. Parses CLI args and dispatches commands.
-// ============================================================
-
 use clap::{Parser, Subcommand};
 use telemetry_oracle::commands;
 use telemetry_oracle::errors::OracleResult;
 
-// ── CLI Struct ─────────────────────────────────────────────────
 /// Telemetry Oracle — An off-chain oracle CLI for real-world asset valuation on Solana
 #[derive(Parser)]
 #[command(name = "telemetry_oracle", version, about)]
@@ -16,7 +10,6 @@ struct Cli {
     command: Commands,
 }
 
-// ── Subcommands Enum ───────────────────────────────────────────
 #[derive(Subcommand)]
 enum Commands {
     /// Add a new real-world asset to your portfolio
@@ -41,7 +34,7 @@ enum Commands {
     Refresh,
 }
 
-// ── Entry Point ────────────────────────────────────────────────
+// ── Entry Point
 #[tokio::main]
 async fn main() -> OracleResult<()> {
     // Load .env variables (silently ignores missing .env file)
